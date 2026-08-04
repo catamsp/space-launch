@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Launch - Minimalist Android Launcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #1a1f2e;
+            --accent-color: #4f46e5;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(79, 70, 229, 0.15) 0%, rgba(11, 15, 25, 1) 100%);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: -webkit-linear-gradient(#f8fafc, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--surface-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-top: 1.5rem;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background-color: rgba(26, 31, 46, 0.5);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background-color: var(--surface-color);
+            transition: background-color 0.2s;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .settings-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .settings-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .settings-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            background-color: var(--surface-color);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Space Launch</h1>
+        <p class="hero-subtitle">A hyper-focused, minimalist Android launcher designed to reduce screen time and maximize productivity.</p>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#settings">Settings</a>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="features">
+            <h2>Core Features</h2>
+            <p>Space Launch transforms your Android experience by replacing cluttered grids with purposeful workspaces.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Universal Search</h3>
+                    <p>Instantly find apps, contacts, and web shortcuts right from your home screen. Lightning fast and entirely on-device.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Built-in Workspaces</h3>
+                    <p>Seamlessly swipe between your App Drawer, Search, Widgets, and Home spaces without opening separate apps.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Integrated Widgets</h3>
+                    <p>Stay on top of your day with beautiful, unified widgets for Weather, To-Do lists, Agenda, Habits, and Music playback.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Hidden Vault</h3>
+                    <p>Protect your sensitive applications behind secure biometric authentication. Out of sight, out of mind.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="settings">
+            <h2>Comprehensive Settings</h2>
+            <p>Tailor every aspect of Space Launch to fit your exact workflow and aesthetic preferences.</p>
+
+            <div class="card">
+                <h3>Global Appearance</h3>
+                <ul class="settings-list">
+                    <li><strong>Wallpapers & Themes:</strong> Choose from curated, distraction-free backgrounds or pick a custom image from your gallery.</li>
+                    <li><strong>Color Accents:</strong> Customize the primary highlight color across the entire launcher interface.</li>
+                    <li><strong>Icon Packs:</strong> Apply custom third-party icon packs to unify your app drawer's look.</li>
+                    <li><strong>Typography:</strong> Adjust the font style and sizing for optimal readability.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Workspace Configuration</h3>
+                <ul class="settings-list">
+                    <li><strong>Card View vs Immersive:</strong> Toggle between distinct card layers or a fluid, edge-to-edge layout for your workspaces.</li>
+                    <li><strong>App Drawer Layout:</strong> Sort apps alphabetically, by usage frequency, or manually pin your favorites to the top.</li>
+                    <li><strong>Widget Management:</strong> Enable or disable specific built-in widgets to keep your dashboard clean.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Privacy & Permissions</h3>
+                <ul class="settings-list">
+                    <li><strong>Transparent Permissions:</strong> View and manage all permissions (Contacts, Calendar, Notifications, Storage) in one clear dashboard. Space Launch clearly explains why each permission is needed before requesting it.</li>
+                    <li><strong>Usage Access:</strong> Optionally enable usage tracking to power smart app suggestions based on your routine.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="privacy">
+            <h2>Privacy Policy</h2>
+            <div class="card">
+                <p><strong>Effective Date:</strong> August 2026</p>
+                
+                <h3>1. Introduction</h3>
+                <p>At Space Launch, your privacy is our highest priority. We believe a launcher should organize your digital life, not monitor it. This policy explains our strict "On-Device First" approach to your data.</p>
+
+                <h3>2. Data Collection & Usage</h3>
+                <p><strong>We do not collect, transmit, or sell your personal data.</strong> All processing happens locally on your device:</p>
+                <ul class="settings-list">
+                    <li><strong>Contacts (READ_CONTACTS):</strong> Used solely to allow you to search and dial contacts from the launcher search bar. Contact data never leaves your device.</li>
+                    <li><strong>Calendar (READ_CALENDAR):</strong> Used to render the Agenda widget. Event data is processed locally and discarded from memory when not in use.</li>
+                    <li><strong>Notifications (NOTIFICATION_LISTENER):</strong> Used to display media controls and active alerts. Content is read locally and never logged or transmitted.</li>
+                    <li><strong>App Usage (PACKAGE_USAGE_STATS):</strong> Used locally to calculate your most-used apps for smart suggestions.</li>
+                </ul>
+
+                <h3>3. Third-Party Services</h3>
+                <p>The only external network requests made by Space Launch are for fetching real-time Weather data (if the Weather widget is enabled). This request is anonymized and only utilizes your approximate location.</p>
+
+                <h3>4. Data Security</h3>
+                <p>Because your sensitive data never leaves your device, it remains protected by your device's native OS security, encryption, and biometric safeguards (such as the Hidden Vault feature).</p>
+
+                <h3>5. Contact Us</h3>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us via our support channels.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Space Launch. Designed for focus.</p>
+    </footer>
+
+</body>
+</html>
