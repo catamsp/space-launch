@@ -3,149 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Space Launch</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --surface-color: #1a1f2e;
-            --accent-color: #4f46e5;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: var(--font-family);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            padding: 3rem 2rem;
-            text-align: center;
-            background: linear-gradient(180deg, rgba(79, 70, 229, 0.15) 0%, rgba(11, 15, 25, 1) 100%);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            background: -webkit-linear-gradient(#f8fafc, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--surface-color);
-            padding-bottom: 0.5rem;
-            color: #e2e8f0;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-top: 1.5rem;
-        }
-
-        p, li {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem 4rem 2rem;
-        }
-
-        .card {
-            background-color: var(--surface-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-top: -2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            position: relative;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .back-link:hover {
-            color: #6366f1;
-        }
-
-        ul {
-            padding-left: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
-        }
-
-        strong {
-            color: var(--text-primary);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-            margin-top: 2rem;
-        }
-    </style>
+    <title>Privacy Policy — Space Launcher</title>
+    <meta name="description" content="Space Launcher's privacy policy — our strict 'On-Device First' approach to your data. We do not collect, transmit, or sell your personal data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;750;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Privacy Policy</h1>
-        <p>Effective Date: August 4, 2026</p>
-    </header>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <img class="brand-logo" src="Resources/finalforeground.svg" alt="Space Launcher logo">
+                Space Launcher
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#widgets">Architecture</a>
+                <a href="docs.html">Docs</a>
+                <a href="index.html#pricing">Pricing</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher" class="btn btn-primary">Get on Google Play</a>
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-head">
+        <div class="container prose">
+            <h1>Privacy Policy</h1>
+            <p class="muted">Effective Date: August 4, 2026</p>
+        </div>
+    </div>
 
     <div class="container">
-        <div class="card">
-            <a href="index.html" class="back-link">← Back to Home</a>
-            
-            <p>At <strong>Space Launch</strong>, your privacy is our highest priority. We believe a launcher should act as a personal tool to organize your digital life, not as a window into it. This Privacy Policy explains our strict "On-Device First" approach to your data, strictly adhering to Google Play's Developer Program Policies regarding sensitive user data.</p>
+        <div class="prose">
+            <div class="card" style="margin-bottom:2rem;">
+                <p>At <strong>Space Launcher</strong>, your privacy is our highest priority. We believe a launcher should act as a personal tool to organize your digital life, not as a window into it. This Privacy Policy explains our strict "On-Device First" approach to your data, strictly adhering to Google Play's Developer Program Policies regarding sensitive user data.</p>
+            </div>
 
             <h2>1. Information We Access and How We Use It</h2>
-            <p>To provide core launcher functionalities, Space Launch requests access to certain sensitive permissions. <strong>None of this data is ever collected, transmitted to our servers, sold, or shared with third parties.</strong> All processing occurs strictly locally on your device.</p>
-            
+            <p>To provide core launcher functionalities, Space Launcher requests access to certain sensitive permissions. <strong>None of this data is ever collected, transmitted to our servers, sold, or shared with third parties.</strong> All processing occurs strictly locally on your device.</p>
+
             <ul>
                 <li><strong>Contacts (READ_CONTACTS):</strong> We access your contacts solely to allow you to search for and dial contacts directly from the launcher's universal search bar and to power the Speed Dial Widget. This data is indexed locally and never leaves your device.</li>
                 <li><strong>Calendar (READ_CALENDAR):</strong> We access your calendar events exclusively to display your upcoming schedule in the Agenda Widget. This data is read temporarily for display purposes and is not stored or transmitted.</li>
-                <li><strong>Notifications (BIND_NOTIFICATION_LISTENER_SERVICE):</strong> We require Notification Access to display media playback controls (Music & Video Widgets), power the Audio Visualizer, and show active app alerts (Notifications Widget). Notification content is processed in real-time on your device and is never logged or uploaded.</li>
+                <li><strong>Notifications (BIND_NOTIFICATION_LISTENER_SERVICE):</strong> We require Notification Access to display media playback controls (Music &amp; Video Widgets), power the Audio Visualizer, and show active app alerts (Notifications Widget). Notification content is processed in real-time on your device and is never logged or uploaded.</li>
                 <li><strong>App Usage (PACKAGE_USAGE_STATS):</strong> We use usage statistics to power the Smart Suggestions Widget (displaying your most frequently used apps) and to facilitate the Mindful Pause intervention features. This calculation is performed entirely on your device's local storage.</li>
-                <li><strong>Storage & Media (READ_EXTERNAL_STORAGE / Media Permissions):</strong> We request storage access to allow you to set custom images from your gallery as your launcher wallpaper or custom app icons.</li>
-                <li><strong>Bluetooth (BLUETOOTH_CONNECT):</strong> We use this permission to detect and display your currently connected audio devices within the Quick Settings Widget interface.</li>
+                <li><strong>Storage &amp; Media (READ_EXTERNAL_STORAGE / Media Permissions):</strong> We request storage access to allow you to set custom images from your gallery as your launcher wallpaper or custom app icons.</li>
+                <li><strong>Bluetooth (BLUETOOTH_CONNECT):</strong> Space Launcher does not scan for, track, or connect to nearby Bluetooth devices. This permission is used solely to read the current status of your Bluetooth adapter (On or Off) to update the Quick Settings tile and allow you to tap the Bluetooth tile to prompt your phone to turn Bluetooth on or open the Bluetooth settings menu.</li>
             </ul>
 
             <h2>2. Data Collection and Sharing</h2>
             <p><strong>We do not collect personal data.</strong> Because all core processing happens on your device, we have no databases containing your personal information, contacts, calendar events, or usage habits. Consequently, we do not and cannot sell or share your personal data with third parties.</p>
 
-            <h2>3. Third-Party Services (Weather)</h2>
-            <p>The only feature in Space Launch that requires an external network request is the <strong>Weather Widget</strong> (if enabled by the user). To provide weather forecasts, the app may securely ping a third-party weather API. This request only utilizes approximate location data (if granted) or a manually entered city name. No personally identifiable information is sent with these requests.</p>
+            <h2>3. Third-Party Services (Weather &amp; Fonts)</h2>
+            <p>The only time Space Launcher connects to the internet is for two optional features:</p>
+            <ul>
+                <li><strong>Weather Widget</strong> — if enabled, the app may securely ping a third-party weather API using approximate location data (if granted) or a manually entered city name. No personally identifiable information is sent with these requests.</li>
+                <li><strong>Custom Font Downloads</strong> — if you choose to download additional fonts, the app fetches them from Google Fonts. No personal data is included in these requests.</li>
+            </ul>
+            <p>Everything else works fully offline.</p>
 
             <h2>4. Data Retention and Deletion</h2>
-            <p>Because Space Launch does not collect or store your data on external servers, there is no account to delete. You maintain complete control over your data. To permanently delete any local preferences, hidden vault settings, or cached data generated by Space Launch, you simply need to:</p>
+            <p>Because Space Launcher does not collect or store your data on external servers, there is no account to delete. You maintain complete control over your data. To permanently delete any local preferences, hidden vault settings, or cached data generated by Space Launcher, you simply need to:</p>
             <ul>
-                <li>Clear the app's data in your Android Settings (Settings > Apps > Space Launch > Storage > Clear Data), or</li>
-                <li>Uninstall the Space Launch application from your device.</li>
+                <li>Clear the app's data in your Android Settings (Settings &gt; Apps &gt; Space Launcher &gt; Storage &gt; Clear Data), or</li>
+                <li>Uninstall the Space Launcher application from your device.</li>
             </ul>
 
             <h2>5. Security</h2>
@@ -157,15 +88,31 @@
             <h2>7. Changes to This Privacy Policy</h2>
             <p>We may update our Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top.</p>
 
-            <h2>8. Contact Us</h2>
+            <h2>8. Refund Policy</h2>
+            <p><strong>One-time purchase (Lifetime):</strong> Space Launcher Pro is a one-time purchase through the Google Play Store. All purchases and refunds are handled by Google per its standard terms and 48-hour refund window.</p>
+            <p><strong>Monthly subscription:</strong> You may cancel your subscription at any time through the Google Play Store. Your access will remain active until the end of the current billing period. Refund requests are handled by Google per its standard refund policy (typically within 48 hours of purchase).</p>
+            <p>If you have any issues with a purchase or refund, please contact us at the email below and we will do our best to assist you.</p>
+
+            <h2>9. Contact Us</h2>
             <p>If you have any questions, concerns, or suggestions regarding this Privacy Policy or our privacy practices, please contact us at:</p>
-            <p><strong>Email:</strong> catamilselvan2001@gmail.com</p>
+            <p><strong>Email:</strong> <a href="mailto:catamilselvan2001@gmail.com">catamilselvan2001@gmail.com</a></p>
+
+            <div class="doc-prevnext">
+                <a href="index.html"><span class="label">← Home</span>Back to the landing page</a>
+                <a href="docs.html"><span class="label">Documentation →</span>How to use Space Launcher</a>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Space Launch. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="margin-top:0; border-top:none;">
+                <span>&copy; 2026 Space Launcher. Minimal but not simple.</span>
+                <span><a href="index.html">Home</a> · <a href="docs.html">Docs</a> · <a href="mailto:catamilselvan2001@gmail.com">Contact</a></span>
+            </div>
+        </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

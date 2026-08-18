@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation — Space Launcher</title>
+    <meta name="description" content="How to use Space Launcher: the wallpaper home screen, top info area, depth widgets, dynamic widgets, quick launch, the hidden space, gestures, settings, mindful pause and permissions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;750;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <img class="brand-logo" src="Resources/finalforeground.svg" alt="Space Launcher logo">
+                Space Launcher
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#widgets">Architecture</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="#getting-started">Getting Started</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher" class="btn btn-primary">Get on Google Play</a>
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container docs-wrap">
+        <!-- Sidebar -->
+        <aside class="docs-side">
+            <nav class="nav-group">
+                <div class="nav-group-title">Getting Started</div>
+                <ul>
+                    <li><a href="#getting-started">Install &amp; first launch</a></li>
+                    <li><a href="#navigation">Navigating the app</a></li>
+                    <li><a href="#default-launcher">Set as default launcher</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-group">
+                <div class="nav-group-title">Pages</div>
+                <ul>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="#pages-settings">Launcher Settings</a></li>
+                    <li><a href="#widgets">Widgets</a></li>
+                    <li><a href="#favourites">Favourites</a></li>
+                    <li><a href="#app-drawer">App Drawer</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#permissions-page">Permissions</a></li>
+                    <li><a href="#hidden-vault">Hidden Vault</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#todo">To-Do</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#games-page">Games</a></li>
+                    <li><a href="#notifications">Notifications</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-group">
+                <div class="nav-group-title">Privacy</div>
+                <ul>
+                    <li><a href="#privacy">Data &amp; privacy</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Content -->
+        <main class="docs-content">
+
+            <h1 style="font-size: clamp(2rem,5vw,2.7rem); letter-spacing:-0.03em; margin-bottom:0.4rem;">Space Launcher documentation</h1>
+            <p class="muted" style="color:var(--text-3); margin:0 0 2rem;">Everything you need to set up and get the most out of Space Launcher.</p>
+
+            <!-- Getting Started -->
+            <section class="doc-card" id="getting-started">
+                <h2>Install &amp; first launch</h2>
+                <p class="lead">Space Launcher is a design-oriented launcher where the wallpaper <em>is</em> your home screen. Instead of an icon grid, everything — clock, widgets, shortcuts — is layered on top of it in a compact, gesture-first layout. Because every layer is customizable, the initial setup takes a few extra minutes. But once you've configured it, daily use becomes second nature: everything you need is one swipe away.</p>
+                <div class="callout">
+                    <p><strong>Heads up:</strong> Space Launcher doesn't follow the traditional launcher model — there's no icon grid on the home screen, no familiar app shortcuts. The wallpaper fills the entire screen, and a swipe up reveals the hidden space where all your apps and pages live. It feels different at first, but that's by design. Give it a few days, and the compact layout will start to feel natural.</p>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">1</div>
+                    <div>
+                        <p><strong>Install the app.</strong> Open the <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher">Play Store listing</a> and tap <strong>Install</strong>.</p>
+                    </div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">2</div>
+                    <div>
+                        <p><strong>Follow the documentation</strong> for navigation and setup guidance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="doc-card" id="navigation">
+                <h2>Navigating the app</h2>
+                <p class="lead">Space Launcher uses gesture-first navigation — there's no icon grid on the home screen. Everything lives in the hidden space, revealed with a single swipe.</p>
+                <div class="doc-shot-row">
+                    <div class="doc-shot">
+                        <img src="Resources/Fullspace/Docs/home_full.jpg" alt="Home screen on first launch">
+                        <span>Home screen</span>
+                    </div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">1</div>
+                    <div><p><strong>The home screen</strong> — this is what you see on first launch. The wallpaper fills the entire screen with the clock, greeting, date, and status bar layered on top. There's no icon grid — everything is gesture-driven.</p></div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">2</div>
+                    <div><p><strong>Swipe up to open the hidden space</strong> — swipe up from the bottom and the wallpaper shrinks to the top, revealing the app drawer and all your pages below it.</p></div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">3</div>
+                    <div><p><strong>Navigate between pages</strong> — in standard mode (the default), drag the page icon on the left up or down to move between pages — Drawer, Widgets, Music, Launcher Settings, and more. You can switch to card mode for horizontal swiping instead. The page icon can also be placed on the right side for left-handed use — toggle this in <strong>Launcher Settings → Cards &amp; Layout → Carousel Position</strong>.</p></div>
+                </div>
+                <div class="doc-shot-row">
+                    <div class="doc-shot">
+                        <img src="Resources/Fullspace/Docs/home_shrink.jpg" alt="Hidden space revealed after swipe up">
+                        <span>Swipe up reveals hidden space</span>
+                    </div>
+                    <div class="doc-shot">
+                        <img src="Resources/Fullspace/Docs/navi_hiddef.jpg" alt="Page navigation in the hidden space">
+                        <span>Page navigation</span>
+                    </div>
+                </div>
+                <p>Head to the <strong>Launcher Settings</strong> page to customize fonts, widgets, and set Space Launcher as your default — see the next section.</p>
+            </section>
+
+            <!-- Default launcher -->
+            <section class="doc-card" id="default-launcher">
+                <h2>Set as default launcher</h2>
+                <p>Once you've found the <strong>Launcher Settings</strong> page (see <a href="#navigation">Navigating the app</a>), you can either set it from there, or through Android Settings:</p>
+                <div class="doc-step">
+                    <div class="doc-step-num">1</div>
+                    <div><p>Open <strong>Settings → Apps → Default apps</strong> (the path varies by manufacturer — on some phones it's <strong>Apps → Home app</strong>).</p></div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">2</div>
+                    <div><p>Choose <strong>Space Launcher</strong>.</p></div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">3</div>
+                    <div><p>Press <kbd>Home</kbd> — you'll now land on your new launcher.</p></div>
+                </div>
+                <p>You can also do this from inside the app: open the <strong>Launcher Settings</strong> page in the hidden space (see <a href="#navigation">Navigating the app</a>), then tap <strong>Set as default launcher</strong>.</p>
+            </section>
+
+            <!-- Pages -->
+            <section class="doc-card" id="pages">
+                <h2>Pages</h2>
+                <p class="lead">Pages are the individual screens inside the hidden space. Each page serves a specific purpose — from your app drawer to music controls to settings. The available pages are: <strong>Drawer</strong>, <strong>Widgets</strong>, <strong>Music</strong>, <strong>Notifications</strong>, <strong>Search</strong>, <strong>Favourites</strong>, <strong>To-Do</strong>, <strong>Games</strong>, <strong>Hidden Vault</strong>, <strong>Launcher Settings</strong>, <strong>Permissions</strong>, and <strong>About</strong>.</p>
+                <h3>Navigating between pages</h3>
+                <ul>
+                    <li><strong>Standard mode</strong> (default) — vertical swiping between pages. Drag the page icon on the left up or down to move between pages. The icon can be placed on the right side for left-handed use — toggle this in <strong>Launcher Settings → Cards &amp; Layout → Carousel Position</strong>.</li>
+                    <li><strong>Card mode</strong> — horizontal swiping through pages. Swipe left or right to move between pages.</li>
+                </ul>
+                <div class="doc-shot-row">
+                    <div class="doc-shot">
+                        <img src="Resources/Fullspace/Docs/Launchsets.jpg" alt="Standard mode — page icon on the left">
+                        <span>Standard mode</span>
+                    </div>
+                    <div class="doc-shot">
+                        <img src="Resources/Fullspace/Docs/launchsetc.jpg" alt="Card mode — no page icon, horizontal swiping">
+                        <span>Card mode</span>
+                    </div>
+                </div>
+                <h3>Page Manager</h3>
+                <p>The <strong>Page Manager</strong> is a master page that controls which pages appear in the hidden space and in what order. Each page has a checkbox to toggle it on or off, and a drag handle to rearrange its position.</p>
+                <div class="doc-shot-row">
+                    <div class="doc-shot">
+                        <img src="Resources/Fullspace/Docs/pagemanager.jpg" alt="Page Manager">
+                        <span>Page Manager</span>
+                    </div>
+                </div>
+                <p>Use the Page Manager to keep only the pages you need — the hidden space stays exactly the set of pages you want.</p>
+            </section>
+
+            <!-- Pages: Launcher Settings -->
+            <section class="doc-card" id="pages-settings">
+                <h2>Launcher Settings</h2>
+                <p class="lead">Open the <strong>Launcher Settings</strong> page from the hidden space to customize every aspect of Space Launcher. Settings are grouped into six areas.</p>
+                <h3>General</h3>
+                <ul>
+                    <li><strong>Pro Membership &amp; Billing</strong> — manage your subscription. displays available plans and the current status of your membership.</li>
+                    <li><strong>Set as default launcher</strong> — make Space Launcher your home screen. Opens the system default-app picker.</li>
+                    <li><strong>Icon Pack</strong> — Space Launcher supports all icon packs available on the market. Apply any icon pack to automatically unify your app drawer, and manually assign specific icons from the pack to any app for full customization.</li>
+                    <li><strong>Swipe down for notifications</strong> — pull down the system notification panel by swiping anywhere on the home screen.</li>
+                    <li><strong>Audio Visualizer</strong> — choose between Off, Subtle Glow, or Aurora Borealis. An animated glow appears in the hidden space while audio is playing. Note: this is a visual effect only — Android does not allow real-time audio recording for third-party apps.</li>
+                </ul>
+                <h3>Quick Search Launch</h3>
+                <ul>
+                    <li><strong>Key Shortcuts</strong> — long press any key on the search page keyboard to assign an app, contact, or shortcut to it. Shortcuts can also be configured directly by long pressing keys on the search page.</li>
+                </ul>
+                <h3>Wallpaper &amp; Background</h3>
+                <ul>
+                    <li><strong>Wallpaper</strong> — set your home screen wallpaper from the gallery.</li>
+                    <li><strong>Wallpaper Color</strong> — apply a solid color from the predefined palette as your wallpaper.</li>
+                    <li><strong>Wallpaper Dimming</strong> — dims the wallpaper by 50% for improved contrast and readability.</li>
+                    <li><strong>Wallpaper Gradient</strong> — applies a black transparent linear gradient from the bottom of the wallpaper upward.</li>
+                    <li><strong>Wallpaper Dual Shade</strong> — segregates the wallpaper and hidden space into two distinct color zones, available in organic curve or rectangle shapes.</li>
+                    <li><strong>Wallpaper Shadow</strong> — applies a drop shadow to the wallpaper area when swiped up into the hidden space.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Tip:</strong> Combine Dimming + Gradient + Shadow Color with a busy wallpaper for the cleanest, most readable home screen.</p>
+                </div>
+                <h3>Cards &amp; Layout</h3>
+                <ul>
+                    <li><strong>Bottom Card Layout</strong> — toggle between standard mode (vertical swiping) and card mode (horizontal swiping) for navigating pages.</li>
+                    <li><strong>Carousel Position</strong> — (standard mode only) place the page navigation icon on the left or right side of the screen.</li>
+                    <li><strong>Card Color</strong> — (card mode only) customize the card background color.</li>
+                    <li><strong>Card Shadow</strong> — (card mode only) drop shadow on the card.</li>
+                    <li><strong>Card Emboss</strong> — (card mode only) makes the card look elevated from the hidden space.</li>
+                    <li><strong>Hidden Space Color</strong> — (both modes) change the hidden space background color.</li>
+                </ul>
+                <h3>Visual Depth Effects</h3>
+                <ul>
+                    <li><strong>Glass Cards</strong> — when enabled, widgets on the home screen are displayed inside translucent glass-like cards.</li>
+                    <li><strong>Depth Effect</strong> — when enabled with a depth time or depth text widget active, the built-in visual processing separates the wallpaper foreground from the background to create a true dimensional effect.</li>
+                    <li><strong>Depth Shadow</strong> — adds a shadow to the foreground object in the wallpaper when the depth effect is active.</li>
+                    <li><strong>Parallax Effect</strong> — adds subtle depth motion to the wallpaper and cards on swipe, active when the depth effect is enabled.</li>
+                    <li><strong>Hide Status Bar</strong> — hides the system status bar on the home screen for a cleaner, more immersive look.</li>
+                    <li><strong>Auto Hide Inactive Media/Notifs</strong> — automatically hides the music and notification widgets when they have no data to display.</li>
+                </ul>
+                <h3>Appearance &amp; Themes</h3>
+                <ul>
+                    <li><strong>Top Info Font</strong> — the typeface for the top info area (time, date, greeting, day progress).</li>
+                    <li><strong>Alignment</strong> — the top info area and depth widgets support vertical and horizontal alignment control.</li>
+                    <li><strong>Downloadable Fonts</strong> — add new fonts from the font store (Pro).</li>
+                </ul>
+                <h3>App Drawer &amp; Focus</h3>
+                <ul>
+                    <li><strong>App Grid</strong> — switch between grid and list views in the app drawer. This also affects the Favourites page.</li>
+                    <li><strong>Hide App Names</strong> — hide app labels in the app drawer and Favourites page for a cleaner look.</li>
+                    <li><strong>Show Work Profile Apps</strong> — when a work profile is set up, display work profile apps in the app drawer.</li>
+                    <li><strong>Close Hidden Space on Launch</strong> — when an app is launched, the shrunken wallpaper performs a pull-down animation before the app opens.</li>
+                    <li><strong>Mindful Pause Apps</strong> — add apps that require mindful pause before opening.</li>
+                    <li><strong>Mindful Pause Free Time</strong> — set a daily usage threshold for mindful apps. Exceeding it triggers a lockout period.</li>
+                </ul>
+                <h3>Typography</h3>
+                <ul>
+                    <li><strong>Global Font Family</strong> — the primary typeface used across the launcher. Supports 1900+ fonts.</li>
+                    <li><strong>Depth Time Font</strong> — the typeface for the depth time widget. Supports 1900+ fonts.</li>
+                    <li><strong>Depth Text Font</strong> — the typeface for the depth text widget. Supports 1900+ fonts.</li>
+                </ul>
+                <p>Settings marked with a lock icon are <strong>Pro</strong> features. Tapping them shows a toast message.</p>
+            </section>
+
+            <!-- Widgets -->
+            <section class="doc-card" id="widgets">
+                <h2>Widgets</h2>
+                <p class="lead">Widgets live in two places: the basic widgets on the home screen, and the dynamic widgets on the Widgets page inside the hidden space.</p>
+                <h3>Basic Widgets</h3>
+                <ul>
+                    <li><strong>Time</strong> — the depth time widget displayed on the home screen.</li>
+                    <li><strong>Date</strong> — the current date displayed below the time.</li>
+                    <li><strong>Greetings</strong> — a personalized greeting message. You can add your name (max 15 characters).</li>
+                    <li><strong>Day Progress</strong> — a progress bar showing how much of the day has elapsed.</li>
+                    <li><strong>Status Bar Icons</strong> — system status indicators (battery, network, etc.) displayed on the home screen.</li>
+                </ul>
+                <p>All basic widgets support both <strong>vertical and horizontal alignment</strong> for flexible placement.</p>
+                <h3>Depth widgets</h3>
+                <ul>
+                    <li><strong>Depth Time</strong> — a dimensional time widget with built-in visual processing. Customizable in font, size, and alignment.</li>
+                    <li><strong>Depth Text</strong> — a dimensional text widget with built-in visual processing. Customizable in font, size, and alignment.</li>
+                </ul>
+                <p>Both depth widgets support <strong>vertical and horizontal alignment</strong> and can be <strong>resized</strong> to fit your preferred layout.</p>
+                <h3>Quick widgets</h3>
+                <ul>
+                    <li><strong>Dynamic widgets</strong> — a swipeable collection of functional widgets: To-Do, Music Player, Speed Dial, Habit Tracker, Quick Launch, Agenda, Quick Settings, Smart Suggestions, Weather, and System widgets. Swipe horizontally with one widget per page. When you swipe up, they displace and fade so the wallpaper stays clean and the hidden space has room to unfold.</li>
+                    <li><strong>Notification icons</strong> — when enabled, displays active notification icons just above the navigation bar for a quick glance.</li>
+                    <li><strong>Left Quick</strong> — a quick-launch slot on the left side of the home screen. Configure with apps, shortcuts, or contacts for direct launch.</li>
+                    <li><strong>Right Quick</strong> — a quick-launch slot on the right side of the home screen. Configure with apps, shortcuts, or contacts for direct launch.</li>
+                </ul>
+                <h3>Widget configuration</h3>
+                <p><strong>Dynamic widgets:</strong> When Dynamic Widgets is enabled, a <strong>+</strong> icon appears at the bottom of the home screen. Tap it to add your own app widgets to the dynamic carousel. To remove a widget, long-press it. Swipe to browse and add new widgets to the carousel.</p>
+                <p><strong>Quick launch widgets:</strong> Left Quick and Right Quick each show a <strong>+</strong> icon at the bottom of the home screen. Tap it to add a new app, contact, or shortcut. Long-press again to reconfigure or replace the item.</p>
+                <p>All quick widgets support <strong>vertical alignment</strong>.</p>
+                <div class="callout">
+                    <p><strong>Tip:</strong> The Weather widget needs either location permission or a manually entered city name. Everything else works fully offline.</p>
+                </div>
+            </section>
+
+            <!-- Pages: Favourites -->
+            <section class="doc-card" id="favourites">
+                <h2>Favourites</h2>
+                <p class="lead">A dedicated page for your most-used apps, contacts, and shortcuts — all in one place.</p>
+                <ul>
+                    <li><strong>Apps</strong> — add any installed app for instant access.</li>
+                    <li><strong>Contacts</strong> — add people you reach out to most often.</li>
+                    <li><strong>Shortcuts</strong> — add system shortcuts or launcher actions.</li>
+                </ul>
+                <p>Favourites supports both <strong>grid</strong> and <strong>list</strong> display modes.</p>
+            </section>
+
+            <!-- Pages: App Drawer -->
+            <section class="doc-card" id="app-drawer">
+                <h2>App Drawer</h2>
+                <p class="lead">The app drawer shows a list of all installed apps. Long-press any app to manage it.</p>
+                <ul>
+                    <li><strong>Change icon</strong> — long-press an app to manually assign a different icon from your icon pack.</li>
+                    <li><strong>Uninstall</strong> — long-press an app and select Uninstall to remove it.</li>
+                    <li><strong>App Info</strong> — long-press an app and select App Info to open the system app settings.</li>
+                </ul>
+            </section>
+
+            <!-- Pages: Contacts -->
+            <section class="doc-card" id="contacts">
+                <h2>Contacts</h2>
+                <p class="lead">A dedicated page showing your contacts list. Tap a contact to directly call or message them.</p>
+                <ul>
+                    <li><strong>Call</strong> — tap a contact to initiate a phone call.</li>
+                    <li><strong>Message</strong> — tap a contact to send a text message.</li>
+                </ul>
+            </section>
+
+            <!-- Pages: Permissions -->
+            <section class="doc-card" id="permissions-page">
+                <h2>Permissions</h2>
+                <p class="lead">A dedicated page listing every permission the launcher uses and why. Space Launcher is "On-Device First". No data is collected, transmitted, or sold. Permissions are optional and only power the feature they belong to.</p>
+                <ul>
+                    <li><strong>Contacts</strong> — search and dial contacts from the launcher (Speed Dial, Favourites, Left/Right Quick).</li>
+                    <li><strong>Notification access</strong> — powers media controls, the audio visualizer, and the Notifications widget.</li>
+                    <li><strong>Calendar</strong> — renders the Agenda widget with your upcoming events and meetings.</li>
+                    <li><strong>Send notifications</strong> — shows Mindful Pause and other launcher notifications.</li>
+                    <li><strong>Bluetooth</strong> — reads the current adapter status (On/Off) to update the Quick Settings tile. Space Launcher does not scan for, track, or connect to nearby Bluetooth devices.</li>
+                    <li><strong>App usage stats</strong> — powers Smart Suggestions and Mindful Pause usage projections.</li>
+                    <li><strong>Storage / Media</strong> — custom wallpaper and app icons.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Internet permission:</strong> Used only for downloading custom fonts and fetching weather data. Everything else works fully offline.</p>
+                </div>
+                <p>You can revoke any permission at any time in Android Settings. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+            </section>
+
+            <!-- Pages: Hidden Vault -->
+            <section class="doc-card" id="hidden-vault">
+                <h2>Hidden Vault</h2>
+                <p class="lead">A private, locked page for apps you don't want visible on your home screen.</p>
+                <ul>
+                    <li><strong>Password protection</strong> — on first use, set a password to access the vault. You can also use your device's lock screen and biometric security.</li>
+                    <li><strong>Hide apps</strong> — move any app into the Hidden Vault from the app drawer.</li>
+                    <li><strong>Close on Launch</strong> — enable so the vault locks automatically as soon as you launch an app from it.</li>
+                    <li><strong>Vault Color</strong> — choose a color to match your theme.</li>
+                </ul>
+                <div class="callout danger">
+                    <p><strong>Important:</strong> The Hidden Vault protects your apps from prying eyes on your device. It is <em>not</em> a remote backup — clearing the app's data or uninstalling removes everything.</p>
+                </div>
+            </section>
+
+            <!-- Pages: Music -->
+            <section class="doc-card" id="music">
+                <h2>Music</h2>
+                <p class="lead">A dedicated page showing the currently playing track with full playback controls.</p>
+                <ul>
+                    <li><strong>Now playing</strong> — displays the current track title, artist, and album art.</li>
+                    <li><strong>Playback controls</strong> — play, pause, skip forward, and skip back.</li>
+                    <li><strong>Progress bar</strong> — shows elapsed time and total duration. Scrub to seek.</li>
+                </ul>
+            </section>
+
+            <!-- Pages: To-Do -->
+            <section class="doc-card" id="todo">
+                <h2>To-Do</h2>
+                <p class="lead">A simple task list with reminders. Add tasks, set a reminder time, and stay on track.</p>
+                <ul>
+                    <li><strong>Add tasks</strong> — create new to-do items directly from the To-Do page.</li>
+                    <li><strong>Reminder time</strong> — set a reminder for each task so you don't forget.</li>
+                    <li><strong>Complete tasks</strong> — mark tasks as done when finished.</li>
+                </ul>
+            </section>
+
+            <!-- Pages: Search -->
+            <section class="doc-card" id="search">
+                <h2>Search</h2>
+                <p class="lead">A full-featured search page with QWERTY and dial pad modes. Search for apps, contacts, shortcuts, settings, and launcher settings all in one place.</p>
+                <ul>
+                    <li><strong>QWERTY keyboard</strong> — type to search across apps, contacts, shortcuts, settings, and launcher settings.</li>
+                    <li><strong>Dial pad</strong> — switch to dial pad mode for quick number input and contact search.</li>
+                    <li><strong>Long-press to quick launch</strong> — long-press a result to directly launch an app, contact, or shortcut.</li>
+                </ul>
+            </section>
+
+            <!-- Pages: Games -->
+            <section class="doc-card" id="games-page">
+                <h2>Games</h2>
+                <p class="lead">Built-in, lightweight, offline games you can play without leaving the launcher.</p>
+                <ul>
+                    <li><strong>Snake</strong> — the classic.</li>
+                    <li><strong>Tic-Tac-Toe</strong> — a quick match.</li>
+                </ul>
+                <p>To exit a game, <strong>long-press the center restart icon</strong>.</p>
+            </section>
+
+            <!-- Pages: Notifications -->
+            <section class="doc-card" id="notifications">
+                <h2>Notifications</h2>
+                <p class="lead">A dedicated page showing all your active notifications. Read and reply without leaving the launcher.</p>
+                <ul>
+                    <li><strong>Active notifications</strong> — view notifications from all your apps in one place.</li>
+                    <li><strong>Read &amp; reply</strong> — open, read, and reply to messages directly from the Notifications page.</li>
+                </ul>
+            </section>
+
+            <!-- Mindful Pause -->
+            <section class="doc-card" id="mindful-pause">
+                <h2>Mindful Pause</h2>
+                <p class="lead">A gentle intervention that shows you the real cost of your screen habits before you open a distracting app.</p>
+                <div class="doc-step">
+                    <div class="doc-step-num">1</div>
+                    <div><p>Go to <strong>Settings → App Drawer &amp; Focus → Mindful Pause Apps</strong> and select the apps you want to slow down.</p></div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">2</div>
+                    <div><p>Set <strong>Mindful Pause Free Time</strong> — your daily usage threshold for those apps.</p></div>
+                </div>
+                <div class="doc-step">
+                    <div class="doc-step-num">3</div>
+                    <div><p>When you open a mindful app, a <strong>30-second timer</strong> appears showing your usage stats and projections. A disclaimer tells you how much time will be blocked if you exceed your threshold. Choose to continue or step back.</p></div>
+                </div>
+                <p>Mindful Pause works entirely on-device using local usage statistics — nothing is uploaded.</p>
+            </section>
+
+            <!-- Privacy -->
+            <section class="doc-card" id="privacy">
+                <h2>Data &amp; privacy</h2>
+                <p class="lead">Space Launcher never collects, transmits, or sells your data. Everything stays on your device.</p>
+                <p>The only time Space Launcher connects to the internet is for two optional features: <strong>downloading custom fonts</strong> and <strong>fetching weather data</strong>. Nothing else requires a network connection.</p>
+                <p>See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+            </section>
+
+            <!-- Prev / Next -->
+            <div class="doc-prevnext">
+                <a href="index.html">
+                    <span class="label">← Home</span>
+                    Back to the landing page
+                </a>
+                <a href="#getting-started">
+                    <span class="label">Top of docs →</span>
+                    Jump to Getting Started
+                </a>
+            </div>
+
+        </main>
+
+        <!-- On this page -->
+        <aside class="doc-toc">
+            <h4>On this page</h4>
+            <ul>
+                <li><a href="#getting-started">Install &amp; first launch</a></li>
+                <li><a href="#default-launcher">Default launcher</a></li>
+                <li><a href="#widgets">Widgets</a></li>
+                <li><a href="#pages-settings">Settings</a></li>
+                <li><a href="#mindful-pause">Mindful Pause</a></li>
+                    <li><a href="#permissions-page">Permissions &amp; privacy</a></li>
+                    <li><a href="#games-page">Games</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="margin-top:0; border-top:none;">
+                <span>&copy; 2026 Space Launcher. Minimal but not simple. No data collected. Fully on device.</span>
+                <span><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:catamilselvan2001@gmail.com">Contact</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

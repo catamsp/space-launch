@@ -3,298 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Launch - Minimalist Android Launcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --surface-color: #1a1f2e;
-            --accent-color: #4f46e5;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: var(--font-family);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: linear-gradient(180deg, rgba(79, 70, 229, 0.15) 0%, rgba(11, 15, 25, 1) 100%);
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            background: -webkit-linear-gradient(#f8fafc, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--surface-color);
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-top: 1.5rem;
-        }
-
-        p, li {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 2rem 4rem 2rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: var(--surface-color);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
-            background-color: rgba(26, 31, 46, 0.5);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            background-color: var(--surface-color);
-            transition: background-color 0.2s;
-        }
-
-        .nav-links a:hover {
-            background-color: var(--accent-color);
-        }
-
-        .settings-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .settings-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .settings-list li::before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-            background-color: var(--surface-color);
-            margin-top: 4rem;
-        }
-    </style>
+    <title>Space Launcher — A minimalist Android launcher for focus</title>
+    <meta name="description" content="Space Launcher is a hyper-focused, minimalist Android launcher designed to reduce screen time and maximize productivity. Widgets, deep customization, and mindful pause — all on-device.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;750;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Space Launch</h1>
-        <p class="hero-subtitle">A hyper-focused, minimalist Android launcher designed to reduce screen time and maximize productivity.</p>
-        <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#settings">Settings</a>
-            <a href="#privacy">Privacy Policy</a>
+    <!-- ================= Nav ================= -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="brand">
+                <img class="brand-logo" src="Resources/finalforeground.svg" alt="Space Launcher logo">
+                Space Launcher
+            </a>
+            <div class="nav-links">
+                <a href="#widgets">Architecture</a>
+                <a href="#customize">Features &amp; Customize</a>
+                <a href="#gallery">Screenshots</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="docs.html">Docs</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher" class="btn btn-primary">Get on Google Play</a>
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= Hero ================= -->
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="hero-glow"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <span class="eyebrow reveal">Minimal but not simple</span>
+                <h1 class="hero-title reveal reveal-d1">
+                    A launcher that <span class="gradient-text">gets out of your way</span>
+                </h1>
+                <p class="hero-sub reveal reveal-d2">
+                    Your wallpaper is the home screen. Time, depth widgets, and dynamic tools live right on it —
+                    and one swipe up unfolds a hidden space of pages. Everything processed on your device.
+                </p>
+                <div class="btn-row reveal reveal-d3">
+                    <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher" class="btn btn-primary btn-lg">Download on Google Play</a>
+                    <a href="docs.html" class="btn btn-ghost btn-lg">Read the docs</a>
+                </div>
+                <div class="hero-stats reveal reveal-d4">
+                    <div>
+                        <div class="stat-num">100%</div>
+                        <div class="stat-label">On-device, ad-free</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">12+</div>
+                        <div class="stat-label">Widgets &amp; tools</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">0</div>
+                        <div class="stat-label">Data collected</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-wrap reveal reveal-d2">
+                <div class="phone-halo"></div>
+                <div class="phone">
+                    <div class="carousel">
+                        <img src="Resources/Fullspace/Pages.jpg" alt="Pages and workspaces">
+                        <img src="Resources/Fullspace/Widgets.jpg" alt="Widgets">
+                        <img src="Resources/Fullspace/Music.jpg" alt="Music player">
+                        <img src="Resources/Fullspace/Notifications.jpg" alt="Notifications">
+                        <img src="Resources/Fullspace/Search.jpg" alt="Universal search">
+                        <img src="Resources/Fullspace/Drawer.jpg" alt="App drawer">
+                        <img src="Resources/Fullspace/Favourites.jpg" alt="Favourites">
+                        <img src="Resources/Fullspace/TO-do.jpg" alt="To-do list">
+                        <img src="Resources/Fullspace/Games.jpg" alt="Built-in games">
+                        <img src="Resources/Fullspace/Hidden%20vault.jpg" alt="Hidden vault">
+                        <img src="Resources/Fullspace/Launcher%20settings.jpg" alt="Launcher settings">
+                        <img src="Resources/Fullspace/Permissions.jpg" alt="Permissions">
+                        <img src="Resources/Fullspace/About.jpg" alt="About">
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <section id="features">
-            <h2>Core Features & Widgets</h2>
-            <p>Space Launch transforms your Android experience by replacing cluttered grids with purposeful workspaces. Every widget is designed with extreme attention to detail to keep you productive.</p>
-            
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>Smart Suggestions Widget</h3>
-                    <p>Leverages local on-device usage stats to predict and surface the apps you are most likely to need right now, reducing the time spent searching your app drawer.</p>
+    <!-- ================= Intro band ================= -->
+    <section class="band">
+        <div class="band-glow"></div>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Meet Space Launcher</span>
+                <h2>Built around one idea: your wallpaper, your space</h2>
+                <p>Space Launcher keeps the home screen untouched — a wallpaper you love — and layers what you need on top of it. Time, depth, dynamic tools, and quick actions in one place, with everything else one swipe away.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal reveal-d1">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3>Wallpaper-first home screen</h3>
+                    <p>The wallpaper is the home screen. Top info, depth widgets, and dynamic tools sit directly on it — nothing cluttered on top.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Weather Widget</h3>
-                    <p>Provides a clean, minimalist view of your local weather conditions and forecast without requiring you to open a dedicated weather application.</p>
+                <div class="card reveal reveal-d2">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg>
+                    </div>
+                    <h3>Real depth widgets</h3>
+                    <p>Built-in visual processing separates the foreground of your wallpaper so it floats in front of the depth clock and text — true dimensional home screen.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>To-Do Widget</h3>
-                    <p>A simple, highly accessible task list right on your home screen. Quickly add, check off, and manage your daily tasks with zero friction.</p>
+                <div class="card reveal reveal-d3">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                    </div>
+                    <h3>One-swipe hidden space</h3>
+                    <p>Swipe up and the wallpaper shrinks away, revealing a hidden space with every page you need — all reachable with one finger.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Agenda Widget</h3>
-                    <p>Integrates directly with your device's calendar to show your upcoming events and meetings at a glance, ensuring you never miss an appointment.</p>
+                <div class="card reveal reveal-d1">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>No data collected</h3>
+                    <p>Every feature runs locally on your device. Nothing is collected, transmitted, or sold.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Habit Widget</h3>
-                    <p>Track your daily goals and habits visually. A persistent reminder on your home screen helps build consistency and mindfulness.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Music & Video Widgets</h3>
-                    <p>Control your active media playback directly from the launcher. Play, pause, skip, and view current track information instantly.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Speed Dial & Quick Launch Widgets</h3>
-                    <p>Pin your most important contacts for one-tap calling, and set up quick shortcuts to your most frequently used actions or apps.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Quick Settings & Notifications Widgets</h3>
-                    <p>Access essential device toggles (Wi-Fi, Bluetooth) and view your recent notifications in a unified, distraction-free interface.</p>
+                <div class="card reveal reveal-d2">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                    </div>
+                    <h3>Fully on device</h3>
+                    <p>Smart suggestions, mindful pause, depth widgets — all processed locally using built-in visual processing.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="settings">
-            <h2>Comprehensive Settings & Customization</h2>
-            <p>Tailor every aspect of Space Launch to fit your exact workflow and aesthetic preferences. Each setting is designed to give you precise control.</p>
-
-            <div class="card">
-                <h3>Global Appearance & Themes</h3>
-                <ul class="settings-list">
-                    <li><strong>Icon Pack:</strong> Apply custom third-party icon packs to unify your app drawer's look and match your chosen aesthetic.</li>
-                    <li><strong>Global Font Family:</strong> Choose the primary typeface used throughout the launcher to match your personal style.</li>
-                    <li><strong>Depth Time Font & Depth Text Font:</strong> Specifically configure the typography used for the lock screen/home screen clock and prominent text elements for a customized depth effect.</li>
-                </ul>
+    <!-- ================= Widgets & features ================= -->
+    <section class="section" id="widgets">
+        <div class="section-glow section-glow--tl" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">The home screen</span>
+                <h2>Four layers, one wallpaper</h2>
+                <p>Everything on the home screen is built from four layers — the top info area, depth widgets, dynamic widgets, and quick launch. Each is fully customizable in font, size, and alignment. Swipe up and the wallpaper yields to the hidden space below — every page, one thumb away.</p>
             </div>
 
-            <div class="card">
-                <h3>Wallpaper & Background Customization</h3>
-                <ul class="settings-list">
-                    <li><strong>Wallpaper:</strong> Choose a custom image from your gallery to serve as your launcher's background.</li>
-                    <li><strong>Wallpaper Color:</strong> Extract or manually set a dominant color from your wallpaper to theme the launcher's UI elements.</li>
-                    <li><strong>Wallpaper Dimming:</strong> Darken the wallpaper slightly to increase the contrast and legibility of text and icons on your home screen.</li>
-                    <li><strong>Wallpaper Gradient:</strong> Apply a subtle gradient overlay to your wallpaper for a more dynamic, modern look.</li>
-                    <li><strong>Wallpaper Dual Shade:</strong> Split the wallpaper background into two complementary shades for a unique, structured aesthetic.</li>
-                    <li><strong>Wallpaper Shadow Color:</strong> Adjust the color of the shadow cast by text and elements against the wallpaper for perfect visibility.</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h3>Card & Layout</h3>
-                <ul class="settings-list">
-                    <li><strong>Bottom Card Layout:</strong> Toggle between a distinct floating card style or a standard edge-to-edge layout for the bottom workspaces.</li>
-                    <li><strong>Card Color:</strong> Customize the background color of the workspace cards to match or contrast with your wallpaper.</li>
-                    <li><strong>Card Shadow Color & Emboss:</strong> Fine-tune the 3D appearance of cards by adjusting their shadow color and emboss depth for a tactile feel.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>App Drawer & Focus Features</h3>
-                <ul class="settings-list">
-                    <li><strong>App Drawer Grid:</strong> Toggle the layout of the app drawer between a structured grid and a minimalist list view.</li>
-                    <li><strong>Hide App Names:</strong> Remove text labels from apps in the drawer for a cleaner, icon-only aesthetic.</li>
-                    <li><strong>Show Work Profile Apps:</strong> Seamlessly integrate or hide your enterprise/work profile applications within the main drawer.</li>
-                    <li><strong>Close Hidden Space on Launch:</strong> Automatically lock and close your secure hidden app vault as soon as you launch an app from it.</li>
-                    <li><strong>Mindful Pause Apps:</strong> Select specific addictive or distracting apps that will trigger a mindful breathing pause before they are allowed to open.</li>
-                    <li><strong>Mindful Pause Free Time:</strong> Set a daily allowance of free time for your mindful apps before the pause intervention kicks in.</li>
-                </ul>
+            <!-- Row: Top Info Area -->
+            <div class="feature-row reveal">
+                <div class="feature-copy">
+                    <h3>Top Info Area</h3>
+                    <p>The top of your wallpaper keeps the essentials at a glance — time, date, a personal greeting, and a day-progress bar. Below them, real-time status icons show what's actually happening on your phone: live network speed, battery percentage, whether an alarm is set, and when your camera or mic is in use. Each icon appears only according to usage state — shown while the feature is in use, then hidden automatically once idle. Every element can be positioned vertically or horizontally, and the whole area follows one global font typography, so it always fits your wallpaper.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Time, date, greeting &amp; day progress in one glance
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Real-time status icons — live network speed, battery percentage, alarm, camera &amp; mic, and more
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Vertical &amp; horizontal alignment under one global font typography
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Readable on any wallpaper — except pure white, where white text would disappear
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-media">
+                    <div class="phone">
+                        <img class="feature-img" src="Resources/Fullspace/Pages.jpg" alt="Top info area screenshot">
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>System Integration</h3>
-                <ul class="settings-list">
-                    <li><strong>Swipe down for notifications:</strong> Enable a gesture to pull down the system notification shade by swiping anywhere on the home screen.</li>
-                    <li><strong>Audio Visualizer:</strong> Display a dynamic audio visualizer on the home screen when media is playing (requires notification access).</li>
-                </ul>
+            <!-- Row: Depth Widgets -->
+            <div class="feature-row feature-row--flip reveal">
+                <div class="feature-copy">
+                    <h3>Depth Widgets</h3>
+                    <p>The depth clock and depth text feel alive — built-in visual processing separates the foreground object from your wallpaper and renders it in front of the depth widgets for a true 3D effect. Depth time and depth text each take their own font, and you can grow the set just by adding depth shadows and a parallax effect.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Depth time &amp; depth text widgets, each with its own font
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Built-in visual processing, on-device
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Add more depth with depth shadows &amp; parallax effect
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Font &amp; alignment tuned to your wallpaper
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-media">
+                    <div class="phone">
+                        <img class="feature-img" src="Resources/Screenshot_20260812_093642.jpg" alt="Depth widgets screenshot">
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section id="privacy">
-            <h2>Privacy Policy</h2>
-            <div class="card">
-                <p><strong>Effective Date:</strong> August 2026</p>
-                
-                <h3>1. Introduction</h3>
-                <p>At Space Launch, your privacy is our highest priority. We believe a launcher should organize your digital life, not monitor it. This policy explains our strict "On-Device First" approach to your data.</p>
-
-                <h3>2. Data Collection & Usage</h3>
-                <p><strong>We do not collect, transmit, or sell your personal data.</strong> All processing happens locally on your device:</p>
-                <ul class="settings-list">
-                    <li><strong>Contacts (READ_CONTACTS):</strong> Used solely to allow you to search and dial contacts from the launcher search bar. Contact data never leaves your device.</li>
-                    <li><strong>Calendar (READ_CALENDAR):</strong> Used to render the Agenda widget. Event data is processed locally and discarded from memory when not in use.</li>
-                    <li><strong>Notifications (NOTIFICATION_LISTENER):</strong> Used to display media controls and active alerts. Content is read locally and never logged or transmitted.</li>
-                    <li><strong>App Usage (PACKAGE_USAGE_STATS):</strong> Used locally to calculate your most-used apps for smart suggestions.</li>
-                </ul>
-
-                <h3>3. Third-Party Services</h3>
-                <p>The only external network requests made by Space Launch are for fetching real-time Weather data (if the Weather widget is enabled). This request is anonymized and only utilizes your approximate location.</p>
-
-                <h3>4. Data Security, Retention & Deletion</h3>
-                <p>Because your sensitive data never leaves your device, it remains protected by your device's native OS security, encryption, and biometric safeguards. All data processed by Space Launch is retained locally on your device and is permanently deleted when you clear the app's data or uninstall the application. We do not store any user data on external servers.</p>
-
-                <h3>5. Terms of Service & Refund Policy</h3>
-                <p>Space Launch is distributed via the Google Play Store. Any in-app purchases, subscriptions, or app purchases are subject to Google Play's standard Terms of Service and Refund Policy. If you are unsatisfied with a purchase, you can request a refund directly through the Google Play Store within their specified refund window.</p>
-
-                <h3>6. Contact Us</h3>
-                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the app, please contact the developer at: <strong>catamilselvan2001@gmail.com</strong>.</p>
+            <!-- Row: Dynamic Widgets -->
+            <div class="feature-row reveal">
+                <div class="feature-copy">
+                    <h3>Dynamic Widgets</h3>
+                    <p>Dynamic widgets bring your tools straight to the home screen — to-do list, music player, speed dial, habit tracker, quick launch, agenda, quick settings, smart suggestions, weather, and notifications. You can also add other apps' widgets as system widgets. Each page holds one widget, swiped horizontally, and every widget stays updated without opening its app.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Ten built-in tools — to-do, music player, speed dial, habit tracker, quick launch, agenda, quick settings, smart suggestions, weather &amp; notifications
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Horizontal swiping, one widget per page
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Add other apps' widgets as system widgets (a few may not render)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Swipe up — dynamic widgets displace and fade, clearing the wallpaper for the hidden space
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Opacity control on every dynamic widget
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-media">
+                    <div class="phone">
+                        <img class="feature-img" src="Resources/Screenshot_20260812_094208.jpg" alt="Dynamic widgets screenshot">
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 Space Launch. Designed for focus.</p>
+            <!-- Row: Quick Launch -->
+            <div class="feature-row feature-row--flip reveal">
+                <div class="feature-copy">
+                    <h3>Quick Launch &amp; Notifications</h3>
+                    <p>Both bottom corners hold your one-tap essentials — pin a contact, a shortcut, or any app to open the camera, make a quick call, or scan and pay in a flash. Right above the navigation bar sits a compact notifications strip showing icons for every notification currently active in the system panel, so you always know what's waiting. Both widgets support vertical alignment and opacity control.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Pin contacts, shortcuts &amp; apps to both corners
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Quick call, quick camera, scan &amp; pay
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Notification icons from the active system panel, placed above the navigation bar
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            Vertical alignment &amp; opacity control on both
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-media">
+                    <div class="phone">
+                        <img class="feature-img" src="Resources/Fullspace/Favourites.jpg" alt="Quick launch favourites screenshot">
+                    </div>
+                </div>
+            </div>
+
+            <div class="arch-panel reveal">
+                <div class="band-glow"></div>
+                <div class="arch-head reveal">
+                    <span class="eyebrow">One-swipe navigation</span>
+                    <h3>The hidden space</h3>
+                    <p>Swipe up from the bottom and the wallpaper shrinks, displacing to the top as the hidden space unfolds. Every space page lives there — flip vertically or swipe horizontally through cards, and control it all from a single Page Manager.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card reveal reveal-d1">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
+                        </div>
+                        <h3>Swipe up to reveal</h3>
+                        <p>The wallpaper gracefully shrinks and slides to the top, turning your home screen into the entrance to the hidden space.</p>
+                    </div>
+                    <div class="card reveal reveal-d2">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                        <h3>Vertical page mode</h3>
+                        <p>Swipe up and down to move through your space pages as a continuous, natural stack.</p>
+                    </div>
+                    <div class="card reveal reveal-d1">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+                        </div>
+                        <h3>Horizontal card mode</h3>
+                        <p>Swipe left and right through pages as glanceable cards — quick to scan, quick to land.</p>
+                    </div>
+                    <div class="card reveal reveal-d2">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        </div>
+                        <h3>Page Manager</h3>
+                        <p>A master page that switches any space page on or off and rearranges their order — the hidden space is fully yours.</p>
+                    </div>
+                </div>
+                <div class="band-pages reveal reveal-d3">
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/></svg>
+                        Pages
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                        Drawer
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M3 15h18"/></svg>
+                        Widgets
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                        Music
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+                        Notifications
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                        Search
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+                        Favourites
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-5"/></svg>
+                        To-Do
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M6 11v4M4 13h4M15 12h.01M18 15h.01"/></svg>
+                        Games
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                        Hidden Vault
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        Settings
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+                        Permissions
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+                        About
+                    </span>
+                    <span class="page-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                        Page Manager
+                    </span>
+                </div>
+                <p class="band-note reveal reveal-d4">Every page is reachable with a thumb at the bottom — nothing forces you to reach the top of the screen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Customization ================= -->
+    <section class="band" id="customize">
+        <div class="band-glow"></div>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Features &amp; Customization</span>
+                <h2>Make every pixel yours</h2>
+                <p>A full-featured launcher — icon packs, home-screen layouts, depth effects, smart search, and over 1900 fonts at your fingertips.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal reveal-d1">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    </div>
+                    <h3>Third-party icon packs</h3>
+                    <p>Apply any third-party icon pack to completely restyle your app grid.</p>
+                </div>
+                <div class="card reveal reveal-d2">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <h3>Music &amp; visualiser</h3>
+                    <p>Built-in music player controls and a decorative audio visualizer widget on the home screen.</p>
+                </div>
+                <div class="card reveal reveal-d3">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></svg>
+                    </div>
+                    <h3>Long-press shortcuts</h3>
+                    <p>Long-press any keyboard key to instantly launch a specific app, contact, or shortcut — no menus needed.</p>
+                </div>
+                <div class="card reveal reveal-d1">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M3 15h18"/></svg>
+                    </div>
+                    <h3>Wallpaper dimming, gradient &amp; dual shade</h3>
+                    <p>Tune wallpaper dimming, apply color gradients, and layer dual shades to match your mood.</p>
+                </div>
+                <div class="card reveal reveal-d2">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3>Vertical &amp; horizontal cards</h3>
+                    <p>Choose between vertical-scroll or horizontal-swipe card layouts for quick access.</p>
+                </div>
+                <div class="card reveal reveal-d3">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h3>Hidden space</h3>
+                    <p>A swipe-away page for apps and files you want kept out of sight.</p>
+                </div>
+                <div class="card reveal reveal-d1">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Depth &amp; parallax</h3>
+                    <p>Wallpaper-backed depth layers with parallax scrolling that adds dimension to the home screen.</p>
+                </div>
+                <div class="card reveal reveal-d2">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                    </div>
+                    <h3>Favourites</h3>
+                    <p>Pin your most-used apps to a dedicated strip for instant access.</p>
+                </div>
+                <div class="card reveal reveal-d3">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    </div>
+                    <h3>Todo list &amp; notifications</h3>
+                    <p>A built-in todo list and notification panel on the home screen so you never miss what matters.</p>
+                </div>
+                <div class="card reveal reveal-d1">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v.01"/></svg>
+                    </div>
+                    <h3>Work profile support</h3>
+                    <p>Separate work and personal apps with full work-profile integration in the drawer.</p>
+                </div>
+                <div class="card reveal reveal-d2">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Mindful Pause</h3>
+                    <p>A 30-second intervention with usage stats and a blocking disclaimer every time you open a distracting app.</p>
+                </div>
+                <div class="card reveal reveal-d3">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+                    </div>
+                    <h3>1900+ fonts</h3>
+                    <p>Access over 1900 Google Fonts to customize every piece of text on your home screen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Focus / Mindful ================= -->
+    <section class="section" id="focus">
+        <div class="section-glow section-glow--cc" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head reveal" style="text-align:center; margin:0 auto;">
+                <span class="eyebrow">Focus mode</span>
+                <h2>Mindful Pause — see the real cost</h2>
+                <p>Select the apps that hijack your attention. Every time you open them, Space Launcher shows a 30-second timer with your usage stats and projections — plus a warning about how much time will be blocked if you exceed your daily threshold.</p>
+                <div class="btn-row reveal reveal-d2" style="justify-content:center; margin-top:1.75rem;">
+                    <a href="docs.html#mindful-pause" class="btn btn-primary">Learn how Mindful Pause works</a>
+                </div>
+            </div>
+                <div class="grid-3" style="margin-top:3rem;">
+                <div class="card reveal reveal-d1">
+                    <h3>Choose your apps</h3>
+                    <p>Pick the distractions — social feeds, games, video — that deserve a second thought.</p>
+                </div>
+                <div class="card reveal reveal-d2">
+                    <h3>30-second stat screen</h3>
+                    <p>Every time you open a mindful app, a timer shows how much time you've wasted and what the projected lifetime cost looks like.</p>
+                </div>
+                <div class="card reveal reveal-d3">
+                    <h3>Threshold &amp; blocking</h3>
+                    <p>Set a daily usage threshold. Exceed it, and the app is blocked for a calculated period — the more you overuse, the longer the lockout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Gallery ================= -->
+    <section class="section" id="gallery">
+        <div class="section-glow section-glow--tr" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Screenshots</span>
+                <h2>See it in action</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260812_094247.jpg" alt="Space Launcher screenshot 1">
+                    <div class="gallery-caption">Home workspace</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260812_094208.jpg" alt="Space Launcher screenshot 2">
+                    <div class="gallery-caption">Weather &amp; widgets</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260812_093642.jpg" alt="Space Launcher screenshot 3">
+                    <div class="gallery-caption">Depth &amp; layout</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260811_215746.jpg" alt="Space Launcher screenshot 4">
+                    <div class="gallery-caption">Games</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260811_183756.jpg" alt="Space Launcher screenshot 5">
+                    <div class="gallery-caption">Smart suggestions</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260811_182102.jpg" alt="Space Launcher screenshot 6">
+                    <div class="gallery-caption">Music &amp; media</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="Resources/Screenshot_20260811_181702.jpg" alt="Space Launcher screenshot 7">
+                    <div class="gallery-caption">Agenda &amp; tasks</div>
+                </div>
+                <div class="gallery-item reveal reveal-d1" style="background: linear-gradient(160deg, var(--surface-3), var(--surface)); display:flex; align-items:center; justify-content:center;">
+                    <a href="docs.html" style="text-align:center;">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--accent-strong)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <div style="font-weight:600;">Explore the docs</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Pricing ================= -->
+    <section class="section" id="pricing">
+        <div class="section-glow section-glow--cc" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head reveal" style="text-align:center; margin:0 auto;">
+                <span class="eyebrow">Pricing</span>
+                <h2>Catch it at the right price</h2>
+                <p>Prices shift with time-limited offers and seasonal deals.<br>Check the Play Store for the latest price — you might just snag a bargain.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher"
+                   class="btn btn-primary"
+                   style="margin-top:1.75rem;">See current price on Google Play</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq">
+        <div class="section-glow section-glow--tl" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head reveal" style="text-align:center; margin:0 auto;">
+                <span class="eyebrow">FAQ</span>
+                <h2>Frequently asked questions</h2>
+            </div>
+            <div class="faq">
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        Does Space Launcher collect my data?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>No. All processing happens locally on your device. The only external request is optional weather data, which is anonymized. See the <a href="privacy.html">Privacy Policy</a>.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        Which Android permissions do I need to grant?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Permissions are optional and feature-scoped: contacts (search &amp; dial), calendar (Agenda widget), notification access (music controls &amp; visualizer), and usage stats (Smart Suggestions). Depth widgets use built-in visual processing entirely on-device. Each permission only powers the feature it belongs to.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        What is Mindful Pause?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>You select distracting apps and set a daily usage threshold. Every time you open one, a 30-second timer shows your usage stats and projections. A disclaimer warns you how much time will be blocked if you exceed your threshold. You can choose to continue or step back.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        What is the hidden space?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Swipe up from the bottom and the wallpaper shrinks, displacing to the top as the hidden space unfolds. Every page lives there — Drawer, Widgets, Music, Notifications, Search, Favourites, To-Do, Games, Hidden Vault, Settings and more — in vertical page or horizontal card modes, all reachable with one finger.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        What are depth widgets?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Depth time and depth text widgets float over your wallpaper. Built-in visual processing runs entirely on-device to separate the foreground object from your wallpaper, rendering it in front of the depth widgets for a true three-dimensional effect.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        Can I hide apps in a secure vault?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Yes. The Hidden Vault page inside the hidden space stores apps privately, protected by your device's lock screen and biometric security, and can auto-lock after you launch an app from it.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        What are the system requirements?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Space Launcher runs on Android devices. Some features (wallpaper depth effects, dynamic theming) work best on recent Android versions.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">
+                        How do I set Space Launcher as my default launcher?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Open Space Launcher and follow the on-screen setup, or go to <strong>Settings → Apps → Default apps → Home app</strong> and choose Space Launcher. Full steps are in the <a href="docs.html">documentation</a>.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <span class="eyebrow">Ready when you are</span>
+                <h2>Start your phone with intention</h2>
+                <p>Download Space Launcher, and give yourself a home screen designed for focus.</p>
+                <div class="btn-row" style="justify-content:center;">
+                    <a href="https://play.google.com/store/apps/details?id=com.catamsp.spacelauncher" class="btn btn-primary btn-lg">Download on Google Play</a>
+                    <a href="docs.html" class="btn btn-ghost btn-lg">Read the docs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="brand" style="margin-bottom:0.75rem;">
+                        <img class="brand-logo" src="Resources/finalforeground.svg" alt="Space Launcher logo">
+                        Space Launcher
+                    </a>
+                    <p style="font-size:0.92rem; max-width:300px;">A wallpaper-first, one-swipe Android launcher. Designed for focus.</p>
+                </div>
+                <div>
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#widgets">Architecture</a></li>
+                        <li><a href="#gallery">Screenshots</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs.html">Documentation</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:catamilselvan2001@gmail.com">catamilselvan2001@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Space Launcher. Minimal but not simple. No data collected. Fully on device.</span>
+                <span>Made with care for Android.</span>
+            </div>
+        </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
