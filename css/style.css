@@ -773,6 +773,20 @@ ul { padding-left: 1.25rem; }
 .doc-shot img { max-width: 200px; border-radius: 22px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 0 4px #000, 0 16px 40px rgba(0, 0, 0, 0.5); }
 .doc-shot span { display: block; margin-top: 0.6rem; font-size: 0.8rem; color: var(--text-3); }
 
+.doc-phone-wrap { text-align: center; margin: 2rem 0; }
+.doc-phone {
+    display: inline-block;
+    aspect-ratio: 9 / 20;
+    max-width: 220px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px #000, 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+.doc-phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.doc-phone-wrap > span { display: block; margin-top: 0.6rem; font-size: 0.8rem; color: var(--text-3); }
+
 .callout {
     border: 1px solid var(--border);
     border-left: 3px solid var(--accent);
@@ -931,6 +945,7 @@ kbd {
     .doc-card { padding: 1.25rem; }
     .doc-shot img { max-width: 140px; }
     .doc-shot-row { gap: 0.75rem; }
+    .doc-phone { max-width: 160px; }
     .hero-stats { gap: 1rem; }
     .stat-num { font-size: 1.2rem; }
     .page-head { padding: calc(var(--nav-h) + 2rem) 0 1rem; }
