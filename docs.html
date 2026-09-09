@@ -79,8 +79,8 @@
 
             <h1 style="font-size: clamp(2rem,5vw,2.7rem); letter-spacing:-0.03em; margin-bottom:0.4rem;">Space Launcher documentation</h1>
             <p class="muted" style="color:var(--text-3); margin:0 0 2rem;">Everything you need to set up and get the most out of Space Launcher.</p>
-            <div class="callout warn">
-                <p><strong>Note:</strong> This documentation was prepared during the development stage. Some details may have changed. We are working on a full update.</p>
+            <div class="callout">
+                <p><strong>Space Launcher v1.0.0 Documentation</strong></p>
             </div>
 
             <!-- Getting Started -->
@@ -157,12 +157,7 @@
                     <li><strong>Card mode</strong> (default) — horizontal swiping through pages. Swipe left or right to move between pages.</li>
                     <li><strong>Standard mode</strong> — vertical swiping between pages. Drag the page icon on the left up or down to move between pages. The icon can be placed on the right side for left-handed use — toggle this in <strong>Launcher Settings → Cards &amp; Layout → Carousel Position</strong>.</li>
                 </ul>
-                <div class="doc-phone-wrap">
-                    <div class="doc-phone">
-                        <video src="Resources/nav.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <span>Navigate between pages — swipe or drag the page icon</span>
-                </div>
+                <p>See <a href="#navigation">Navigating the app</a> for a demo of page navigation.</p>
                 <h3>Page Manager</h3>
                 <p>The <strong>Page Manager</strong> is a master page that controls which pages appear in the hidden space and in what order. Each page has a checkbox to toggle it on or off, a drag handle to rearrange its position, and a home icon to set it as the page that opens when you swipe up. Only one page can be the home page. If no home page is set, the launcher returns to whichever page you last had open.</p>
                 <div class="doc-phone-wrap">
@@ -182,7 +177,7 @@
                 <ul>
                     <li><strong>Pro Membership &amp; Billing</strong> — manage your subscription. displays available plans and the current status of your membership.</li>
                     <li><strong>Set as default launcher</strong> — make Space Launcher your home screen. Opens the system default-app picker.</li>
-                    <li><strong>Icon Pack</strong> — Space Launcher supports all icon packs available on the market. Apply any icon pack to automatically unify your app drawer, and manually assign specific icons from the pack to any app for full customization.</li>
+                    <li><strong>Icon Pack</strong> — Space Launcher supports all icon packs available on the market, plus built-in Material Icons in five styles — Default, Sharp, Rounded, Outlined, and Two Tone. Apply any icon pack to automatically unify your app drawer, and manually assign specific icons from the pack to any app for full customization.</li>
                     <li><strong>Swipe down for notifications</strong> — pull down the system notification panel by swiping anywhere on the home screen.</li>
                     <li><strong>Audio Visualizer</strong> — choose between Off, Subtle Glow, or Aurora Borealis. An animated glow appears in the hidden space while audio is playing. Note: this is a visual effect only — Android does not allow real-time audio recording for third-party apps.</li>
                 </ul>
@@ -192,11 +187,11 @@
                 </ul>
                 <h3>Wallpaper &amp; Background</h3>
                 <ul>
-                    <li><strong>Wallpaper</strong> — set your home screen wallpaper from the gallery.</li>
-                    <li><strong>Wallpaper Color</strong> — apply a solid color from the predefined palette as your wallpaper.</li>
+                    <li><strong>Wallpaper</strong> — by default, Space Launcher applies it to both the home screen and lock screen. To use a separate lock screen wallpaper, change it through your system wallpaper settings.</li>
+                    <li><strong>Wallpaper Color</strong> — choose from a predefined palette or use the color picker sliders to set any color you want as your wallpaper.</li>
                     <li><strong>Wallpaper Dimming</strong> — dims the wallpaper by 50% for improved contrast and readability.</li>
                     <li><strong>Wallpaper Gradient</strong> — applies a black transparent linear gradient from the bottom of the wallpaper upward.</li>
-                    <li><strong>Wallpaper Dual Shade</strong> — segregates the wallpaper and hidden space into two distinct color zones, available in organic curve or rectangle shapes.</li>
+                    <li><strong>Wallpaper Dual Shade</strong> — clips the bottom of the wallpaper into a shape when you access the hidden space. Choose from multiple clipping styles including paint drip, theater arch, organic curve, rectangle, and more.</li>
                     <li><strong>Wallpaper Shadow</strong> — applies a drop shadow to the wallpaper area when swiped up into the hidden space.</li>
                 </ul>
                 <div class="callout">
@@ -209,32 +204,35 @@
                     <li><strong>Card Color</strong> — (card mode only) customize the card background color.</li>
                     <li><strong>Card Shadow</strong> — (card mode only) drop shadow on the card.</li>
                     <li><strong>Card Emboss</strong> — (card mode only) makes the card look elevated from the hidden space.</li>
+                    <li><strong>Extend Card</strong> — (card mode only) when enabled, the card background vanishes and the content renders directly on the hidden space. Card Color has no effect in this mode.</li>
                     <li><strong>Hidden Space Color</strong> — (both modes) change the hidden space background color.</li>
                 </ul>
                 <h3>Visual Depth Effects</h3>
                 <ul>
                     <li><strong>Glass Cards</strong> — when enabled, widgets on the home screen are displayed inside translucent glass-like cards.</li>
                     <li><strong>Depth Effect</strong> — when enabled with a depth time or depth text widget active, the built-in visual processing separates the wallpaper foreground from the background to create a true dimensional effect.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Note:</strong> Prerequisites: 1) Depth Effect must be turned on, 2) a depth widget (depth time or depth text) must be active on the home screen, 3) then set your wallpaper having a clear object which occupies 50% of the screen.</p>
+                </div>
+                <ul>
                     <li><strong>Depth Shadow</strong> — adds a shadow to the foreground object in the wallpaper when the depth effect is active.</li>
                     <li><strong>Parallax Effect</strong> — adds subtle depth motion to the wallpaper and cards on swipe, active when the depth effect is enabled.</li>
                     <li><strong>Hide Status Bar</strong> — hides the system status bar on the home screen for a cleaner, more immersive look.</li>
                     <li><strong>Auto Hide Inactive Media/Notifs</strong> — automatically hides the music and notification widgets when they have no data to display.</li>
                 </ul>
-                <h3>Appearance &amp; Themes</h3>
-                <ul>
-                    <li><strong>Top Info Font</strong> — the typeface for the top info area (time, date, greeting, day progress).</li>
-                    <li><strong>Alignment</strong> — the top info area and depth widgets support vertical and horizontal alignment control.</li>
-                    <li><strong>Downloadable Fonts</strong> — add new fonts from the font store (Pro).</li>
-                </ul>
                 <h3>App Drawer &amp; Focus</h3>
                 <ul>
-                    <li><strong>App Grid</strong> — switch between grid and list views in the app drawer. This also affects the Favourites page.</li>
-                    <li><strong>Hide App Names</strong> — hide app labels in the app drawer and Favourites page for a cleaner look.</li>
+                    <li><strong>App Grid</strong> — switch between grid and list views in the app drawer. This also affects the Favourites and Games pages.</li>
+                    <li><strong>Hide App Names</strong> — hide app labels in the app drawer, Favourites, and Games pages for a cleaner look.</li>
                     <li><strong>Show Work Profile Apps</strong> — when a work profile is set up, display work profile apps in the app drawer.</li>
                     <li><strong>Close Hidden Space on Launch</strong> — when an app is launched, the shrunken wallpaper performs a pull-down animation before the app opens.</li>
                     <li><strong>Mindful Pause Apps</strong> — add apps that require mindful pause before opening.</li>
                     <li><strong>Mindful Pause Free Time</strong> — set a daily usage threshold for mindful apps. Exceeding it triggers a lockout period.</li>
                 </ul>
+                <div class="callout">
+                    <p><strong>How it works:</strong> When you open a mindful app, a 30-second timer appears showing your usage stats and projections. A disclaimer tells you how much time will be blocked if you exceed your threshold. You can choose to continue or step back. Mindful Pause works entirely on-device — nothing is uploaded.</p>
+                </div>
                 <h3>Typography</h3>
                 <ul>
                     <li><strong>Global Font Family</strong> — the primary typeface used across the launcher. Supports 1900+ fonts.</li>
@@ -296,7 +294,7 @@
                 <h2>App Drawer</h2>
                 <p class="lead">The app drawer shows a list of all installed apps. Long-press any app to manage it.</p>
                 <ul>
-                    <li><strong>Change icon</strong> — long-press an app to manually assign a different icon from your icon pack.</li>
+                    <li><strong>Change icon</strong> — long-press an app to manually assign a different icon from your icon pack or Material Icons.</li>
                     <li><strong>Uninstall</strong> — long-press an app and select Uninstall to remove it.</li>
                     <li><strong>App Info</strong> — long-press an app and select App Info to open the system app settings.</li>
                 </ul>
@@ -326,7 +324,7 @@
                     <li><strong>Storage / Media</strong> — custom wallpaper and app icons.</li>
                 </ul>
                 <div class="callout">
-                    <p><strong>Internet permission:</strong> Used only for downloading custom fonts and fetching weather data. Everything else works fully offline.</p>
+                    <p><strong>Internet permission:</strong> Used only for downloading custom icons, custom fonts, and fetching weather data. Everything else works fully offline.</p>
                 </div>
                 <p>You can revoke any permission at any time in Android Settings. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
             </section>
@@ -400,30 +398,11 @@
                 </ul>
             </section>
 
-            <!-- Mindful Pause -->
-            <section class="doc-card" id="mindful-pause">
-                <h2>Mindful Pause</h2>
-                <p class="lead">A gentle intervention that shows you the real cost of your screen habits before you open a distracting app.</p>
-                <div class="doc-step">
-                    <div class="doc-step-num">1</div>
-                    <div><p>Go to <strong>Settings → App Drawer &amp; Focus → Mindful Pause Apps</strong> and select the apps you want to slow down.</p></div>
-                </div>
-                <div class="doc-step">
-                    <div class="doc-step-num">2</div>
-                    <div><p>Set <strong>Mindful Pause Free Time</strong> — your daily usage threshold for those apps.</p></div>
-                </div>
-                <div class="doc-step">
-                    <div class="doc-step-num">3</div>
-                    <div><p>When you open a mindful app, a <strong>30-second timer</strong> appears showing your usage stats and projections. A disclaimer tells you how much time will be blocked if you exceed your threshold. Choose to continue or step back.</p></div>
-                </div>
-                <p>Mindful Pause works entirely on-device using local usage statistics — nothing is uploaded.</p>
-            </section>
-
             <!-- Privacy -->
             <section class="doc-card" id="privacy">
                 <h2>Data &amp; privacy</h2>
                 <p class="lead">Space Launcher never collects, transmits, or sells your data. Everything stays on your device.</p>
-                <p>The only time Space Launcher connects to the internet is for two optional features: <strong>downloading custom fonts</strong> and <strong>fetching weather data</strong>. Nothing else requires a network connection.</p>
+                <p>The only time Space Launcher connects to the internet is for three optional features: <strong>downloading custom icons</strong>, <strong>downloading custom fonts</strong>, and <strong>fetching weather data</strong>. Nothing else requires a network connection.</p>
                 <p>See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
             </section>
 
@@ -449,7 +428,6 @@
                 <li><a href="#default-launcher">Default launcher</a></li>
                 <li><a href="#widgets">Widgets</a></li>
                 <li><a href="#pages-settings">Settings</a></li>
-                <li><a href="#mindful-pause">Mindful Pause</a></li>
                     <li><a href="#permissions-page">Permissions &amp; privacy</a></li>
                     <li><a href="#games-page">Games</a></li>
             </ul>
